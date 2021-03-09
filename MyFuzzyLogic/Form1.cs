@@ -112,10 +112,7 @@ namespace MyFuzzyLogic
             InitializeComponent();
         }
 
-        private void CreateFuzzyLogic_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
 
 
