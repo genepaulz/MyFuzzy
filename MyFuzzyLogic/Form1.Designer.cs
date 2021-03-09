@@ -46,20 +46,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.TankRefilSpeedtextBox = new System.Windows.Forms.TextBox();
+            this.HotTankRefilSpeedtextBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.HeatertextBox = new System.Windows.Forms.TextBox();
             this.CoolertextBox = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.CreateFuzzyLogic = new System.Windows.Forms.ToolStripMenuItem();
+            this.HotPush = new System.Windows.Forms.Button();
+            this.WarmPush = new System.Windows.Forms.Button();
+            this.ColdPush = new System.Windows.Forms.Button();
+            this.ColdTankRefilSpeedtextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DispenseHottrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DispenseWarmtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DispenseColdtrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DispenseHottrackBar
@@ -74,7 +75,6 @@
             this.DispenseHottrackBar.TickFrequency = 5;
             this.DispenseHottrackBar.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.DispenseHottrackBar.Value = 15;
-            this.DispenseHottrackBar.ValueChanged += new System.EventHandler(this.DispenseHottrackBar_ValueChanged);
             // 
             // DispenseWarmtrackBar
             // 
@@ -131,7 +131,7 @@
             // 
             // MainTanktextBox
             // 
-            this.MainTanktextBox.Location = new System.Drawing.Point(95, 44);
+            this.MainTanktextBox.Location = new System.Drawing.Point(95, 34);
             this.MainTanktextBox.Name = "MainTanktextBox";
             this.MainTanktextBox.Size = new System.Drawing.Size(100, 20);
             this.MainTanktextBox.TabIndex = 0;
@@ -139,7 +139,7 @@
             // 
             // TMainTanktextBox
             // 
-            this.TMainTanktextBox.Location = new System.Drawing.Point(95, 70);
+            this.TMainTanktextBox.Location = new System.Drawing.Point(95, 60);
             this.TMainTanktextBox.Name = "TMainTanktextBox";
             this.TMainTanktextBox.Size = new System.Drawing.Size(100, 20);
             this.TMainTanktextBox.TabIndex = 2;
@@ -172,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 47);
+            this.label4.Location = new System.Drawing.Point(12, 37);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 13;
@@ -189,7 +189,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 73);
+            this.label5.Location = new System.Drawing.Point(22, 63);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
             this.label5.TabIndex = 15;
@@ -231,18 +231,18 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Temperature";
             // 
-            // TankRefilSpeedtextBox
+            // HotTankRefilSpeedtextBox
             // 
-            this.TankRefilSpeedtextBox.Location = new System.Drawing.Point(326, 44);
-            this.TankRefilSpeedtextBox.Name = "TankRefilSpeedtextBox";
-            this.TankRefilSpeedtextBox.Size = new System.Drawing.Size(100, 20);
-            this.TankRefilSpeedtextBox.TabIndex = 1;
-            this.TankRefilSpeedtextBox.Text = "0";
+            this.HotTankRefilSpeedtextBox.Location = new System.Drawing.Point(326, 34);
+            this.HotTankRefilSpeedtextBox.Name = "HotTankRefilSpeedtextBox";
+            this.HotTankRefilSpeedtextBox.Size = new System.Drawing.Size(100, 20);
+            this.HotTankRefilSpeedtextBox.TabIndex = 1;
+            this.HotTankRefilSpeedtextBox.Text = "0";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(211, 47);
+            this.label10.Location = new System.Drawing.Point(211, 37);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(109, 13);
             this.label10.TabIndex = 21;
@@ -251,7 +251,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MyFuzzyLogic.Properties.Resources.pullthelever;
-            this.pictureBox1.Location = new System.Drawing.Point(411, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(411, 126);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(357, 241);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -289,35 +289,60 @@
             this.label12.TabIndex = 25;
             this.label12.Text = "Cooler Output";
             // 
-            // menuStrip1
+            // HotPush
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.CreateFuzzyLogic});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(790, 24);
-            this.menuStrip1.TabIndex = 26;
-            this.menuStrip1.Text = "menuStrip1";
+            this.HotPush.Location = new System.Drawing.Point(79, 344);
+            this.HotPush.Name = "HotPush";
+            this.HotPush.Size = new System.Drawing.Size(75, 23);
+            this.HotPush.TabIndex = 27;
+            this.HotPush.Text = "PUSH";
+            this.HotPush.UseVisualStyleBackColor = true;
+            this.HotPush.Click += new System.EventHandler(this.HotPush_Click);
             // 
-            // CreateFuzzyLogic
+            // WarmPush
             // 
-            this.CreateFuzzyLogic.Name = "CreateFuzzyLogic";
-            this.CreateFuzzyLogic.Size = new System.Drawing.Size(117, 20);
-            this.CreateFuzzyLogic.Text = "Create Fuzzy Logic";
-            this.CreateFuzzyLogic.Click += new System.EventHandler(this.CreateFuzzyLogic_Click);
+            this.WarmPush.Location = new System.Drawing.Point(166, 344);
+            this.WarmPush.Name = "WarmPush";
+            this.WarmPush.Size = new System.Drawing.Size(75, 23);
+            this.WarmPush.TabIndex = 28;
+            this.WarmPush.Text = "PUSH";
+            this.WarmPush.UseVisualStyleBackColor = true;
+            this.WarmPush.Click += new System.EventHandler(this.WarmPush_Click);
+            // 
+            // ColdPush
+            // 
+            this.ColdPush.Location = new System.Drawing.Point(256, 344);
+            this.ColdPush.Name = "ColdPush";
+            this.ColdPush.Size = new System.Drawing.Size(75, 23);
+            this.ColdPush.TabIndex = 29;
+            this.ColdPush.Text = "PUSH";
+            this.ColdPush.UseVisualStyleBackColor = true;
+            this.ColdPush.Click += new System.EventHandler(this.ColdPush_Click);
+            // 
+            // ColdTankRefilSpeedtextbox
+            // 
+            this.ColdTankRefilSpeedtextbox.Location = new System.Drawing.Point(326, 63);
+            this.ColdTankRefilSpeedtextbox.Name = "ColdTankRefilSpeedtextbox";
+            this.ColdTankRefilSpeedtextbox.Size = new System.Drawing.Size(100, 20);
+            this.ColdTankRefilSpeedtextbox.TabIndex = 31;
+            this.ColdTankRefilSpeedtextbox.Text = "0";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 356);
+            this.ClientSize = new System.Drawing.Size(790, 399);
+            this.Controls.Add(this.ColdTankRefilSpeedtextbox);
+            this.Controls.Add(this.ColdPush);
+            this.Controls.Add(this.WarmPush);
+            this.Controls.Add(this.HotPush);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.CoolertextBox);
             this.Controls.Add(this.HeatertextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.TankRefilSpeedtextBox);
+            this.Controls.Add(this.HotTankRefilSpeedtextBox);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -336,16 +361,13 @@
             this.Controls.Add(this.DispenseColdtrackBar);
             this.Controls.Add(this.DispenseWarmtrackBar);
             this.Controls.Add(this.DispenseHottrackBar);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Zafra Tamad Water Dispenser Simulator w/ Fuzzy Logic controls";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DispenseHottrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DispenseWarmtrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DispenseColdtrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,15 +393,17 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox TankRefilSpeedtextBox;
+        private System.Windows.Forms.TextBox HotTankRefilSpeedtextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox HeatertextBox;
         private System.Windows.Forms.TextBox CoolertextBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem CreateFuzzyLogic;
+        private System.Windows.Forms.Button HotPush;
+        private System.Windows.Forms.Button WarmPush;
+        private System.Windows.Forms.Button ColdPush;
+        private System.Windows.Forms.TextBox ColdTankRefilSpeedtextbox;
     }
 }
 
