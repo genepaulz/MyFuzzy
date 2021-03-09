@@ -1,0 +1,10 @@
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\bin\Debug\MyFuzzyLogic.exe.config
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\bin\Debug\MyFuzzyLogic.exe
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\bin\Debug\MyFuzzyLogic.pdb
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.csprojAssemblyReference.cache
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.Form1.resources
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.Properties.Resources.resources
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.csproj.GenerateResource.cache
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.csproj.CoreCompileInputs.cache
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.exe
+C:\Users\Zafra\Desktop\MyFuzzy\MyFuzzyLogic\obj\Debug\MyFuzzyLogic.pdb
