@@ -17,16 +17,18 @@ namespace MyFuzzyLogic
         FuzzyEngine fe0,fe1;
         MembershipFunctionCollection hottank, coldtank, thottank, tcoldtank, heat, cold;
         LinguisticVariable myhottank, mycoldtank, mythottank, mytcoldtank, myheat, mycold;
-
+        FuzzyRuleCollection myhrules,mycrules;
+        double htML, ctML, tht, tct ,mtML,tmt,rs;
+        int hflag,wflag,cflag;
+        public Form1()
+        {
+            InitializeComponent();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             setMembers();
             setRules();
         }
-
-        FuzzyRuleCollection myhrules,mycrules;
-        double htML, ctML, tht, tct ,mtML,tmt,rs;
-        int hflag,wflag,cflag;
 
         public void setMembers()
         {
@@ -106,16 +108,6 @@ namespace MyFuzzyLogic
             fe1.LinguisticVariableCollection.Add(mycold);
             fe1.FuzzyRuleCollection = mycrules;
         }
-
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
-       
-
-
-
         private void HotPush_Click(object sender, EventArgs e)
         {
             hflag = Math.Abs(DispenseHottrackBar.Value - 15);
